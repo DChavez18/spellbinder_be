@@ -81,6 +81,8 @@ test:
 #
 production:
   <<: *default
-  database: spellbinder_be_production
-  username: spellbinder_be
-  password: <%= ENV["SPELLBINDER_BE_DATABASE_PASSWORD"] %>
+  database: spellbinder_fe_production
+  username: <%= ENV["DATABASE_USERNAME"] %>
+  password: <%= ENV["DATABASE_PASSWORD"] %>
+  host: db
+  port: 5432
